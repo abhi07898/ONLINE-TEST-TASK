@@ -1,0 +1,68 @@
+#header {
+    padding: 10px;
+    background-color: rgb(255, 123, 0);
+    color: bisque;
+    font-size: 30px;
+    text-align: center; 
+}
+#footer {
+    padding: 10px;
+    background-color: rgb(255, 123, 0);
+    color: bisque;
+    font-size: 15px;
+    text-align: center; 
+}
+.link-css{
+    padding: 12px 30px;
+    font-size: 20px;
+    background-color: rgb(255, 123, 0);
+    color:bisque;
+    text-decoration: none;
+    border: none;
+  
+}
+
+.inp-css {
+    font-size: 20px;
+    padding: 5px;
+    border-radius:10px ;
+    margin: 10px;
+   
+}
+#index-table {
+    margin:200px;
+}
+#admin-job-table {
+    margin-top: 170px;
+    margin-left: 100px;
+    margin-bottom: 200px;;
+}
+#manage-question-css {
+    width:100%;
+    border: 1px solid black;
+    padding: 20px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.mng-que-tr {
+    padding: 10px;
+}
+.mng-que-td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+}
+#manage-exam-css {
+    width:100%;
+    border: 1px solid black;
+    padding: 20px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.mng-exam-td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+}
