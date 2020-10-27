@@ -1,22 +1,31 @@
 <?php
 include 'config.php';
+$username_err = $password_err = $incorrect= '';
+$username = $password = '';
 if (isset($_POST ['login'])) {
-    $username = isset($_POST['username'])?$_POST['username']:'';
-    $password = isset($_POST['password'])?$_POST['password']:'';
-    echo $username;
-
-    $sql = "SELECT * FROM   admin WHERE `username` = '" . $username . "' AND `password`='" . $password . "'";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        
-        while ($row = $result-> fetch_assoc()) {
-            $_SESSION['admin'] = $username;
-            header('location:admin-job.php'); 
-           
-        }
+    if (empty($_POST['username'])) {
+        $username_err = "Required Field";
     } else {
-        echo "login failled";
+        $username = $_POST['username'];
     }
-    $conn->close();
+    if (empty($_POST['password'])) {
+        $password_err = "Required Field";
+    } else {
+        $password = $_POST['password'];
+    }
+    if ($username_err=='' and $password_err == '') {
+        $sql = "SELECT * FROM   admin WHERE `username` = '" . $username . "' AND `password`='" . $password . "'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            
+            while ($row = $result-> fetch_assoc()) {
+                $_SESSION['admin'] = $username;
+                header('location:admin-job.php');            
+            }
+        } else {
+            $incorrect =  "login failled 'hey you are entered wrong username or password '";
+        }
+        $conn->close();
+    }    
 } 
 ?>
