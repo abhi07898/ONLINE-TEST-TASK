@@ -37,9 +37,22 @@
 	font-size: 15px;
 	padding :5px;
 }
-/*#signup-content {
-	float: left;
+#quiz-table {
+	width: 80%;
+	border: 2px solid black;
+	padding: 20px;
+	margin-left: 160px;
+	margin-right: 160px;
+
 }
-#signup-img-css {
-	float:right;
-}*/
+.quiz-td {
+	padding : 10px 5px;	
+	border: 2px solid cyan;
+	text-align: center;
+}
+.quiz-link {
+	padding:10px 20px;
+	background-color: cyan;
+	color: black;
+	text-decoration: none;	
+}

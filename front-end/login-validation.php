@@ -22,7 +22,7 @@ if(isset($_POST['login'])) {
             while ($row = $result-> fetch_assoc()) {
                 $_SESSION['admin'] = array('username'=>$row['USERNAME']) ;  
                           
-                //header('location:admin-job.php');            
+                header('location:exam-option.php');            
             }
         } else {
             $incorrect =  "login failled 'hey you are entered wrong username or password '";
