@@ -10,7 +10,7 @@ include 'header.php'; ?>
                     <tr>
                         <td><a href="exam-add.php" class="link-css">ADD EXAM</a></td>                       
                         <td><a href="question-add.php" class="link-css">ADD QUESTION</a> 
-                        <td><a href="" class="link-css">USER</a>
+                        <td><a href="manage-user.php" class="link-css">USER</a>
                     </tr>
                 </table>              
             </form>

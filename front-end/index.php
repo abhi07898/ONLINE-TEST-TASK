@@ -11,6 +11,7 @@ include 'login-validation.php';?>
 				<tr>
 					<td class="table-td">PASSWORD :</td>
 					<td class="table-td"><input type="password" name="password" class="inp-css"><?php echo $password_err ; ?></td>
+					<td>	<?php echo $incorrect ; ?></td>
 					
 				</tr>
 				<tr>
