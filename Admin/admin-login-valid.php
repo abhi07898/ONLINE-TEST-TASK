@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php';
 $username_err = $password_err = $incorrect= '';
 $username = $password = '';
@@ -19,7 +20,8 @@ if (isset($_POST ['login'])) {
         if ($result->num_rows > 0) {
             
             while ($row = $result-> fetch_assoc()) {
-                $_SESSION['admin'] = $username;
+                $_SESSION['admin'] = array('username'=>$row['username']) ;  
+                          
                 header('location:admin-job.php');            
             }
         } else {
