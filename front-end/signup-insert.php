@@ -34,8 +34,7 @@ if(isset($_POST['register'])) {
 	}
 	
 print_r($_POST);
-	if ($username_err == '' and $password_err == '' and $repassword_err == '' and  $qualification_err == '' and $email_err == '' and $contact_err == '') {
-		
+	if ($username_err == '' and $password_err == '' and $repassword_err == '' and  $qualification_err == '' and $email_err == '' and $contact_err == '') {		
 		if ($password !== $repassword) {
                 $password_err = "password does not matched";
                 $error[] = array('input' => 'password', 'msg' => "password did not matched ");
@@ -44,11 +43,9 @@ print_r($_POST);
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        if ($row['USERNAME'] == $username) {
-                             
+                        if ($row['USERNAME'] == $username) {                             
                              $error[] = array('input' => 'username', 'msg' => 'this name is already registered');
-                        } elseif ($row['E-MAIL'] == $email) {
-                        
+                        } elseif ($row['E-MAIL'] == $email) {                        
                             $error[] = array('input' => 'email', 'msg' => 'this email is already registered');
                         }
                     }
@@ -64,11 +61,9 @@ print_r($_POST);
 		        }
 		    } else {
 		    	echo "<script> alert ('your name or email are already registered')</script>";
-		        
 		    } 
 			
 		}
 	}
-	
-		
+
 ?>
