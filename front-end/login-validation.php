@@ -26,7 +26,7 @@ if(isset($_POST['login'])) {
             }
         } else {
             $incorrect =  "login failled 'hey you are entered wrong username or password '";
-        }
+           }
         $conn->close();
     } 
 } 
