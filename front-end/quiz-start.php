@@ -1,14 +1,31 @@
-<?php include 'header.php';
+<?php
+/**
+ * Template File Doc Comment
+ * 
+ * PHP version 7
+ * 
+ * @category Template_Class
+ * @package  Template_Class
+ * @author   Author <author@domain.com>
+ * @license  https://opensource.org/license/MIT MIT License
+ * @link     https://localhost/ 
+ */
+session_start();
+if ($_SESSION['admin'] == '') {
+    header('location:index.php');
+}
 include 'config.php';
+include 'header.php'; ?>
+
+<div class="sess-info">Best Of LUCK  Mr. <?php echo $_SESSION['admin'] ;?>:) Start your quiz now-- </div>
+<?php
 $id = $_GET['id'];
 $limit = 1;
 if(isset($_GET['page'])) {
-	$page = $_GET['page'];	
+	$page = $_GET['page'];
 } else {
 	$page=1;
 }
-
-
 $offset = ($page-1)*$limit;
 
 $sql = "SELECT * FROM question WHERE `exam_id`='$id' LIMIT {$offset}, {$limit}";
@@ -44,7 +61,7 @@ if ($result1->num_rows > 0) {
         echo '<li class="li-css"><a href="quiz-start.php?page='.($page-1).'&id='.$id.'" class="a-css">BACK</a></li>';	
     }
     // for ($i=1; $i<=$total_page; $i++) {
-    //           echo '<li class="li-css"><a href="quiz-start.php?id='.$id.'&page='.$i.'" class="a-css">'.$i.'</a></li>';
+    //     echo '<li class="li-css"><a href="quiz-start.php?id='.$id.'&page='.$i.'" class="a-css">'.$i.'</a></li>';
     //   }
     if ($total_page > $page) {
         echo '<li class="li-css"><a href="quiz-start.php?page='.($page+1).'&id='.$id.'" class="a-css">FORWORD</a></li>';

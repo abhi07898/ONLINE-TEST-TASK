@@ -1,4 +1,20 @@
-<?php include 'header.php'; 
+<?php
+/**
+ * Template File Doc Comment
+ * 
+ * PHP version 7
+ * 
+ * @category Template_Class
+ * @package  Template_Class
+ * @author   Author <author@domain.com>
+ * @license  https://opensource.org/license/MIT MIT License
+ * @link     https://localhost/ 
+ */
+session_start();
+if ($_SESSION['admin']=='') {
+    header('location:index.php');
+}
+include 'header.php'; 
 $id = $_GET['id'];
 $question = $_GET['question'];
 $ans1 = $_GET['ans1'];
@@ -57,9 +73,7 @@ $ans_option = $_GET['ans_option'];
                    </tr>
                 </table>
                 <br><br>
-                <input type="submit" value="UPDATE-QUESTION" class='link-css'><br><br>
-                
-               
+                <input type="submit" value="UPDATE-QUESTION" class='link-css'><br><br>               
             </form>
         </div>
 <?php include 'footer.php'; ?>

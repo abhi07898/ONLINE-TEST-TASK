@@ -81,6 +81,12 @@
 	text-decoration: none;
 	color: black;
 }
+.sess-info {
+	/* padding:10px;
+	text-align: center;
+	font-size: 20px; */
+	background-color: cornflowerblue;
+}
 .ans-btn-css {
 	background-color: black;
 	color: cyan;
@@ -89,3 +95,4 @@
 	text-decoration: none;
 	margin-left: 150px;
 }
+

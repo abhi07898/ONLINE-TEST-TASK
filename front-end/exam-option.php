@@ -1,6 +1,23 @@
 <?php
+/**
+ * Template File Doc Comment
+ * 
+ * PHP version 7
+ * 
+ * @category Template_Class
+ * @package  Template_Class
+ * @author   Author <author@domain.com>
+ * @license  https://opensource.org/license/MIT MIT License
+ * @link     https://localhost/ 
+ */
+
+session_start();
+if ($_SESSION['admin'] == '') {
+    header('location:index.php');
+}
 include 'config.php';
 include 'header.php';?>
+<div class='sess-info'>Hello Mr. <?php echo $_SESSION['admin'];?>Welcome to Exam Portal</div>
 <table id="quiz-table">
 <?php $sql = "SELECT * FROM exam";
 $result = $conn->query($sql);
@@ -17,4 +34,5 @@ if ($result->num_rows > 0) {
 }
 ?>
 </table>
+<a href="logout.php">LOGOUT</a>
 <?php include 'footer.php';?>
