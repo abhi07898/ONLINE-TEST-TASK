@@ -32,7 +32,8 @@ if(isset($_POST['login'])) {
         if ($result->num_rows > 0) {
             
             while ($row = $result-> fetch_assoc()) {
-                $_SESSION['admin'] = $row['USERNAME'];  
+                $_SESSION['admin'] = $row['USERNAME'];
+                $_SESSION['sess_id'] = uniqid();  
                           
                 header('location:exam-option.php');            
             }
