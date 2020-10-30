@@ -1,6 +1,6 @@
 <?php include 'header.php';
 include 'login-validation.php';?>
-<div id="login-content">
+<div id="login-content">	
 	<form action="" method="POST">
 		<table id="login-table">
 			<tr>
@@ -24,5 +24,4 @@ include 'login-validation.php';?>
 <div id="img-css">
     <img src="img/online.png">
 </div>
-
 <?php include 'footer.php';?>

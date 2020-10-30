@@ -1,15 +1,27 @@
-<?php include 'header.php';
+<?php
+/**
+ * Template File Doc Comment
+ * 
+ * PHP version 7
+ * 
+ * @category Template_Class
+ * @package  Template_Class
+ * @author   Author <author@domain.com>
+ * @license  https://opensource.org/license/MIT MIT License
+ * @link     https://localhost/ 
+ */
+include 'header.php';
 include 'signup-insert.php';
 $error = array();?>
 <div>
 	<div id="login-content">
-	 <?php
-            if (sizeof($error) > 0) {
-                foreach ($error as $values) {
-                        echo $values['msg'];
-                }
-            }
-            ?> 
+	    <?php
+		if (sizeof($error) > 0) {
+			foreach ($error as $values) {
+					echo $values['msg'];
+			}
+		}
+		?> 
 		<form action="" method="POST">
 		<table id="login-table">
 		<tr>

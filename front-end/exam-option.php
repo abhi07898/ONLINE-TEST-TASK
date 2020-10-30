@@ -17,6 +17,8 @@ if ($_SESSION['admin'] == '') {
 }
 include 'config.php';
 include 'header.php';?>
+<br><br>
+<a href="logout.php" class="ans-btn-css ">LOGOUT</a><br><br>
 <div class='sess-info'>Hello Mr. <?php echo $_SESSION['admin'];?>Welcome to Exam Portal</div>
 <table id="quiz-table">
 <?php $sql = "SELECT * FROM exam";
@@ -34,5 +36,5 @@ if ($result->num_rows > 0) {
 }
 ?>
 </table>
-<a href="logout.php">LOGOUT</a>
+
 <?php include 'footer.php';?>

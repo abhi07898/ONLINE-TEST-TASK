@@ -36,20 +36,20 @@ if(isset($_POST['register'])) {
 print_r($_POST);
 	if ($username_err == '' and $password_err == '' and $repassword_err == '' and  $qualification_err == '' and $email_err == '' and $contact_err == '') {		
 		if ($password !== $repassword) {
-                $password_err = "password does not matched";
-                $error[] = array('input' => 'password', 'msg' => "password did not matched ");
-            } else {
-                $sql = "SELECT `USERNAME`, `E-MAIL` FROM user";
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        if ($row['USERNAME'] == $username) {                             
-                             $error[] = array('input' => 'username', 'msg' => 'this name is already registered');
-                        } elseif ($row['E-MAIL'] == $email) {                        
-                            $error[] = array('input' => 'email', 'msg' => 'this email is already registered');
-                        }
-                    }
-                }
+			$password_err = "password does not matched";
+			$error[] = array('input' => 'password', 'msg' => "password did not matched ");
+			} else {
+			$sql = "SELECT `USERNAME`, `E-MAIL` FROM user";
+			$result = $conn->query($sql);
+			if ($result->num_rows > 0) {
+				while ($row = $result->fetch_assoc()) {
+					if ($row['USERNAME'] == $username) {                             
+						$error[] = array('input' => 'username', 'msg' => 'this name is already registered');
+					} elseif ($row['E-MAIL'] == $email) {                        
+						$error[] = array('input' => 'email', 'msg' => 'this email is already registered');
+					}
+				}
+			}
 		    if (sizeof($error) == 0) {
 		        $sql  = "INSERT INTO user (`USERNAME` , `PASSWORD`, `QUALIFICATION`, `E-MAIL`) 
 		        VALUES ('$username', '$repassword', '$qualification','$email')";
@@ -62,7 +62,6 @@ print_r($_POST);
 		    } else {
 		    	echo "<script> alert ('your name or email are already registered')</script>";
 		    } 
-			
 		}
 	}
 
