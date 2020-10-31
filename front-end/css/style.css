@@ -96,7 +96,11 @@
 	text-decoration: none;
 	margin-left: 150px;
 }
-#result-table {
+#tr-css{
+	background-color: black;
+	color: white;
+}
+/* #result-table {
 	width: 100%;
 	border: 2px solid cyan;
 	border-collapse: collapse;
@@ -118,8 +122,29 @@
 	padding: 10px 15px;
 	text-align: center;
 
+} */
+#result-table-one {
+	width: 80%;
+	border: 2px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	align-items: center;
+	margin: auto;
+}
+.result-td-css {
+	border: 2px solid black;
+	padding: 10px 17px;
+
+}
+.result-tr:hover {
+	background-color: cyan;
+	color: black;
 }
 
+#result-tr{
+	background-color: black;
+	color:white;	
+}
 
 .quiz-btn-css {
 	background-color: black;
@@ -129,3 +154,4 @@
 	text-decoration: none;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+

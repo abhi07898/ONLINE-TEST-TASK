@@ -27,7 +27,7 @@ global $total_page;
 <?php
 $id = $_GET['id'];
 $limit = 1;
-if(isset($_GET['page'])) {
+if (isset($_GET['page'])) {
 	$page = $_GET['page'];
 } else {
 	$page=1;
@@ -83,7 +83,8 @@ if ($result->num_rows > 0) {
                 <?php if ($page!= 1) : ?><a href='quiz-start.php?page=<?php echo ($page-1);?>&id=<?php echo ($id);?>' class="quiz-btn-css">PREV-QUESTION</a><?php endif; ?> 
                 <?php if ($page!=$total_page) : ?><input type="submit" value="NEXT QUESTION" name="ans-submit" id="ans-submit" class = "quiz-btn-css"><?php endif; ?>
                 <?php if ($page==$total_page) : ?><input type="submit" value="FINISH" name="ans-submit" id="ans-submit" class = "quiz-btn-css"><?php endif; ?>
-                <br>
+                <br><br>
+            </div>
     	</form>
 <?php 
     }
@@ -117,5 +118,5 @@ if ($result->num_rows > 0) {
     });
 </script> -->
 
-
+<br><br><br>
 <?php include 'footer.php';?>

@@ -18,7 +18,7 @@ if ($_SESSION['admin'] == '') {
 include 'config.php';
 include 'header.php';?>
 <br><br>
-<a href="logout.php" class="ans-btn-css ">LOGOUT</a><br><br>
+<a href="logout.php" class="ans-btn-css ">LOGOUT</a> <a href="prev-result.php" class="ans-btn-css ">PREV-RESULT</a><br><br>
 <div class='sess-info'>Hello Mr. <?php echo $_SESSION['admin'];?>Welcome to Exam Portal</div>
 <table id="quiz-table">
 <?php $sql = "SELECT * FROM exam";
