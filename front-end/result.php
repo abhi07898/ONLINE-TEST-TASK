@@ -132,7 +132,7 @@ echo $negative_marks;
             <td class='result-td-css'>Exam Result-Status :</td>
             <td class='result-td-css'>
                 <?php
-                if ($Total_gain > $Total_gain/33.33 ) {
+                if ($Total_gain > ceil(($total_question*$correct_ans)*(33/100))) {
                     echo "PASS"; 
                 } else {
                     echo "FAIL";

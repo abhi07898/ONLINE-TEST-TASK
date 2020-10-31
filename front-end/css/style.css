@@ -100,29 +100,7 @@
 	background-color: black;
 	color: white;
 }
-/* #result-table {
-	width: 100%;
-	border: 2px solid cyan;
-	border-collapse: collapse;
-	text-align: center;
 
-}
-#tr-css1 {
-	color:black;
-	background-color: black;
-}
-.tr-css:hover{
-	background-color: black;
-	color:white;
-}
-.td-css{
-	background-color: #fff;
-	border: 2px solid black;
-	border-collapse: collapse;
-	padding: 10px 15px;
-	text-align: center;
-
-} */
 #result-table-one {
 	width: 80%;
 	border: 2px solid black;

@@ -12,11 +12,11 @@
  */
 
 session_start();
-$sess_name = $_SESSION['admin'];
+
 include 'header.php';
 include 'config.php';
 ?>
-<div class='sess-info'>Hello Mr. <?php echo $_SESSION['admin'];?> If you have done any test rather than it. it will show in below table </div>
+<div class='sess-info'>Hello Mr. <?php echo $_SESSION['admin'];?> This is the list of your all user's Result</div>
 
 <table id="result-table-one">
     <tr id="tr-css">
@@ -31,7 +31,7 @@ include 'config.php';
     </tr>
 
 <?php
-$sql = "SELECT * FROM result WHERE `name`='$sess_name' ";
+$sql = "SELECT * FROM result";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) { ?>
